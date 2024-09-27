@@ -33,9 +33,10 @@ function UserRouter(props) {
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route element={<PrivateRoute />}>
-                    <Route exact path="/Shop" element={<Shop />} />
                     <Route exact path="/Shopdetails/:id" element={<ShopDetails />} />
                 </Route>
+                <Route exact path="/Shop" element={<Shop />} />
+
                 <Route exact path="/cart" element={<Cart />} />
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/review' element={<Review />} />

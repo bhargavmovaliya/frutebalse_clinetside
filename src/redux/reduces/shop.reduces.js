@@ -7,7 +7,7 @@ const initialState = {
 }
 
 export const shopReducer = (state = initialState, action) => {
-    // console.log(action);
+     console.log(action);
 
     switch (action.type) {
         case GET_SHOPDATA:

@@ -1,4 +1,4 @@
-import { ADD_FACILITES, DELETE_FACILITES, UPDATE_FACILITES } from "../ActionType";
+import { ADD_FACILITES, DELETE_FACILITES, UPDATE_FACILITES} from "../ActionType";
 
 const inistialState = {
     isLodaing: false,

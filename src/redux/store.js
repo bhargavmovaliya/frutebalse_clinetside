@@ -11,7 +11,6 @@ export const storeReduces = () => {
         storage,
         whitelist: ['facilites','counter']
     }
-
     const persistedReducer = persistReducer(persistConfig, RootReducer)
 
     const store = createStore(persistedReducer, applyMiddleware(thunk))

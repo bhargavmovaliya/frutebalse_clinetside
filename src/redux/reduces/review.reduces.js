@@ -44,8 +44,7 @@ export const ReviewReducer = (state = initialState, action) => {
                 }),
                 error: null
             }
-
-
+            
         default:
             return state;
     }
