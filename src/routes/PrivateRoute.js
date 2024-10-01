@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate, Outlet, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { checkAuth } from '../redux/slice/AuthForm.slice';
 
 function PrivateRoute(props) {
@@ -13,9 +13,9 @@ function PrivateRoute(props) {
     useEffect(() => {
         const checkAuthState = async () => {
             try {
-                await dispatch(checkAuth())
+             await dispatch(checkAuth())
             } catch (error) {
-                navigate('/authform')
+                 navigate('/authform')
             } finally {
                 setLoding(false)
             }
@@ -23,9 +23,9 @@ function PrivateRoute(props) {
         checkAuthState()
     }, [dispatch, navigate])
 
-    return (
-        isAuthentication ? <Outlet /> : <Navigate to={"/AuthForm"} replace/>
-    );
+    // return (
+    //     isAuthentication ? <Outlet /> : <Navigate to={"/AuthForm"} replace/>
+    // );
 }
 
 export default PrivateRoute;

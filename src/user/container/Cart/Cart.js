@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
+
 import { getProducts } from '../../../redux/action/products.action';
+
 import { deletedata, dicrementQty, incrementQty } from '../../../redux/slice/cart.slice';
+
 import { object, string } from 'yup';
+
 import { useFormik } from 'formik';
+
 import { getCoupon } from '../../../redux/slice/coupan.slice';
+
 import Button from '../../component/UI/Button/Button';
 
 
-function Cart(props) {
+function Cart() {
+
     const cart = useSelector(state => state.cart)
 
     const product = useSelector(state => state.products)
@@ -22,7 +30,7 @@ function Cart(props) {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(getProducts())
+       // dispatch(getProducts())
         dispatch(getCoupon())
     }, [])
 
@@ -117,13 +125,20 @@ function Cart(props) {
                     </div>
                 </div>
             </div>
+            
             {/* Modal Search End */}
             {/* Single Page Header start */}
+
             <div className="container-fluid page-header py-5">
+
                 <h1 className="text-center text-white display-6">Cart</h1>
+
                 <ol className="breadcrumb justify-content-center mb-0">
+
                     <li className="breadcrumb-item"><a href="#">Home</a></li>
+
                     <li className="breadcrumb-item"><a href="#">Pages</a></li>
+
                     <li className="breadcrumb-item active text-white">Cart</li>
                 </ol>
             </div>
@@ -180,7 +195,9 @@ function Cart(props) {
                                             </td>
                                             <td>
                                                 <button onClick={() => hendalDelet(v.id)} className="btn btn-md rounded-circle bg-light border mt-4">
+
                                                     <i className="fa fa-times text-danger" />
+
                                                 </button>
                                             </td>
                                         </tr>
@@ -210,13 +227,21 @@ function Cart(props) {
                         </form>
                     </div>
                     <div className="row g-4 justify-content-end">
+
                         <div className="col-8" />
+
                         <div className="col-sm-8 col-md-7 col-lg-6 col-xl-4">
+
                             <div className="bg-light rounded">
+
                                 <div className="p-4">
+
                                     <h1 className="display-6 mb-4">Cart <span className="fw-normal">Total</span></h1>
+
                                     <div className="d-flex justify-content-between mb-4">
+
                                         <h5 className="mb-0 me-4">Subtotal:</h5>
+
                                         <p className="mb-0">${total.toFixed(2)}</p>
                                     </div>
                                     {

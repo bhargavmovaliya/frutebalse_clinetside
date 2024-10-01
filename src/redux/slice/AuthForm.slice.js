@@ -67,7 +67,7 @@ export const logout = createAsyncThunk(
 
 export const checkAuth = createAsyncThunk(
     'auth/chakAuth',
-    async (_, { rejectWithValue }) => {
+    async (_id, { rejectWithValue }) => {
         try {
             const response = await axiosInstance.get('users/chakAuth')
             console.log(response);

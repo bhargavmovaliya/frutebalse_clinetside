@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { login, ragister} from '../../../redux/slice/AuthForm.slice';
 import { Navigate } from 'react-router-dom';
 import { Badge } from 'reactstrap';
@@ -10,6 +9,7 @@ import GoogleIcon from '@mui/icons-material/Google';
 
 
 function AuthForm(props){
+
     const [type, setType] = useState('login');
 
     const dispatch = useDispatch();
@@ -69,22 +69,22 @@ function AuthForm(props){
     let { handleSubmit, handleChange, handleBlur, touched, errors, values } = formikObj;
 
     // console.log(authSchema);
-
     // console.log(initialVal);
-
-
     if (auth.isAuthentication) {
         return <Navigate to="/" />
     }
-
     const hendlGoogleLogin  = () => {
+        
         window.location.href = "http://localhost:8000/api/v1/users/google"
+
     }
 
     // console.log(errors, touched);
     return (
         <div>
+
             {/* Single Page Header start */}
+
             <div className="container-fluid page-header py-5">
                 <h1 className="text-center text-white display-6">
                     {

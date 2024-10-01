@@ -85,12 +85,19 @@ function Home(props) {
 
     return (
         <div>
+
             {/* Hero Start */}
+
             <div className={`container-fluid py-5 mb-5 hero-header ${theme.theme === 'dark' ? "hero-dark" : null}`}>
+               
                 <div className="container py-5">
+
                     <div className="row g-5 align-items-center">
+                   
                         <div className="col-md-12 col-lg-7">
+                           
                             <h5 className="mb-3 text-secondary">100% Organic Foods</h5>
+                          
                             <h1 className="mb-5 display-3 text-primary">Organic Veggies &amp; Fruits Foods</h1>
                             <div className="position-relative mx-auto">
                                 <input className="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search" />
